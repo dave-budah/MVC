@@ -1,5 +1,7 @@
 <?php
 
+defined('ROOTPATH') OR exit('Access Denied');
+
 if ($_SERVER['SERVER_NAME'] == 'localhost')
 {
     define('DBNAME', 'mvcdb');
@@ -18,6 +20,6 @@ if ($_SERVER['SERVER_NAME'] == 'localhost')
     define('ROOT', 'https://www.selvigtech.com');
 }
 
-define('APP_NAME', 'selvigtech');
-define('APP_VERSION', '1.0');
-define('ADD_DESC', 'Personal portfolio');
+const APP_NAME = 'selvigtech';
+const APP_VERSION = '1.0';
+const ADD_DESC = 'Personal portfolio';

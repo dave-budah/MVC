@@ -2,16 +2,14 @@
 
 namespace Controller;
 
-
 defined('ROOTPATH') OR exit('Access Denied');
 
-
-class PageNotFound
+class Login
 {
     use MainController;
 
     public function index()
     {
-        $this->view('404');
+        $this->view('login');
     }
 }

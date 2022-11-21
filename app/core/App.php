@@ -1,5 +1,8 @@
 <?php
 
+defined('ROOTPATH') OR exit('Access Denied');
+
+
 class App
 {
     private $controller = 'Home';
@@ -27,7 +30,8 @@ class App
             $this->controller = 'PageNotFound';
         }
 
-        $controller = new $this->controller;
+        $mycontroller = '\Controller\\'.$this->controller;
+        $controller = new $mycontroller;
 
 //        Select method
         if (!empty($URL[1])) {
